@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <title>HTML FORM DESIGN</title>
+    <style>
+
+        body{
+            background-color: lightgray;
+        }
+
+        .parent{
+            max-width: 550px;
+        }
+        form{
+           width: 80%;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           margin: auto;
+        }
+
+        .input-icon{
+            width: 25px;
+            height: 25px;
+            margin: auto ;
+        }
+        .input-container{
+            display: flex;
+        }
+        .input-icon-container{
+            display: flex;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border: 1px solid lightgray;
+            padding: 5px;
+        }
+
+        .input-box{
+            width: 100%;
+            border-style:solid;
+            padding: 10px;
+            border-width: 0.5px;
+            border-color: lightgray; 
+            border-left: medium none; 
+        }
+
+        .name-input-container{
+            display: flex;
+            gap: 24px;
+            margin-top: 30px;
+            
+        }
+
+        .dropdown{
+            width: 100%;
+            margin-top: 30px;
+            padding: 12px;
+            border-width: 0.5px;
+            border-color: lightgray;
+        }
+
+        .radio-container{
+            display: flex;
+            gap:8px;
+            margin-top: 30px;
+        }
+
+        
+        .check-container{
+            margin-top: 30px;
+        }
+      
+        .flex-container {
+            display: flex;
+            justify-content: start;
+              }
+
+      
+        input::placeholder {
+            font-family: Graphik Web,sans-serif;
+            font-size: 15px;
+    }
+    
+    @media only screen and (max-width:578px){
+
+        .dropdown{
+            width: 100%;
+            margin-top: 30px;
+            padding: 12px;
+            border-width: 0.5px;
+            border-color: lightgray;
+        }
+
+        .name-input-container{
+            display: flex;
+            margin-top: 30px;
+            
+            
+        }
+
+        .radio-container{
+            display: flex;
+            gap:8px;
+            margin-top: 30px;
+        }
+
+        .check-container{
+            margin-top: 30px;
+        }
+
+    }
+
+  
+    </style>
+
+
+</head>
+<body >
+    <div class="parent" style="width: 100%;height:730px;margin:auto;background-color: white;font-family: Graphik Web,sans-serif;font-size: 18px;">
+    <div style="background-color:#b932eb;height: 8px;line-height: 10px;">
+        </div>
+     <h2 style="text-align: center; margin-top: 29px;margin-bottom:-15px; font-size: 20px; font-family: Graphik Web,sans-serif;">
+        PLEASE FILL UP THIS FORM TO JOIN US</h2>
+     <br><br>
+     <form style="text-align: center;">
+        <div class="input-container">
+            <div class="input-icon-container"><img class="input-icon" src="mail.png"></div>
+            <input class="input-box" type="email" id=email name="email" placeholder="Email" >
+        </div>    
+        <br><br>
+        
+        <div class="input-container" style="margin-top: -10px;">
+            <div class="input-icon-container"><img class="input-icon" src="lock.png" style="width: 20px;height: 20px;"></div>
+            <input class="input-box" type="password" id=pwd name="pwd" placeholder="Password" >
+        </div> 
+        <br>
+        <br>
+        <div class="input-container" style="margin-top: -10px;">
+            <div class="input-icon-container"><img class="input-icon" src="lock.png" style="width: 20px;height: 20px;"></div>
+            <input class="input-box" type="password" id=pwd name="pwd" placeholder="Re-type Password">
+        </div> 
+       
+             <div class="name-input-container">
+                <div class="input-container" style="flex-grow: 1;">
+                    <div class="input-icon-container">
+                        <img class="input-icon" src="fname.png" style="width: 20px;height: 20px;">
+                    </div>
+                    <input class="input-box" type="text" id=fname name="fname" placeholder="First Name">
+                </div>  
+                <div class="input-container" style="flex-grow: 1;">
+                    <div class="input-icon-container">
+                        <img class="input-icon" src="fname.png" style="width: 20px;height: 20px;">
+                    </div>
+                        <input class="input-box" type="text" id=lname name="lname" placeholder="Last Name">
+                </div>  
+            </div>
+
+            <div class="radio-container">
+                <div class="input-container">
+                    <input type="radio" id="html" name="fav_language" value="Male">
+                    <label for="html" >Male</label>
+                </div>
+               <div class="input-container">
+                <input type="radio" id="css" name="fav_language" value="Female">
+               <label for="css">Female</label>
+               </div>
+            </div>
+            
+            <div class="dropdown-container">
+                <select class="dropdown" id="coun" name="coun">
+                    <option value="select">Select a country</option>
+                    <option value="volvo">Bangladesh</option>
+                    <option value="saab">Pakistan</option>
+                    <option value="fiat">Nepal</option>
+                    <option value="audi">Bhutan</option>
+                </select>
+            </div>
+              
+            
+            <div class="check-container">
+                <div class="flex-container">
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1">I agree with terms and conditions</label>
+                </div>
+                <br>
+                <div class="flex-container">
+                    <input type="checkbox" id="vehicle2" name="vehicle1" value="Bike">
+                    <label for="vehicle2">I agree with terms and conditions</label>
+                </div>
+            </div>
+            <br>
+            <div><button style="width: 100%;padding:10px;font-size: 20px;font-weight:700;margin-left: -2px;margin-bottom: 20px;background-color:#b932eb;border:none;text-decoration: none;"><a href="home.html" style="text-decoration: none;color:white">JOIN US</a></button></div>
+        
+        </form>
+    </div>
+</body>
+</html>
